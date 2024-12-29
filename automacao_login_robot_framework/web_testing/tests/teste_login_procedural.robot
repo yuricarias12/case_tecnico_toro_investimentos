@@ -16,4 +16,5 @@ Caso de Teste 01 - Login bem sucedido
     Digitar e-mail válido no campo de E-mail ou CPF
     Digitar senha do e-mail inserido no campo de Senha
     Clicar no botão Entrar
+    Verifica se a url contem /home
     Verificar se a página contem "Olá, Yuri"

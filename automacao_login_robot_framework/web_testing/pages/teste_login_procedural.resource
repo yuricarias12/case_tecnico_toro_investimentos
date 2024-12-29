@@ -43,5 +43,8 @@ Digitar senha do e-mail inserido no campo de Senha
 Clicar no botão Entrar
     Click Button    locator=${BRN_ENTRAR}
 
+Verifica se a url contem /home
+    Wait Until Location Contains    /home
+
 Verificar se a página contem "${TXT_BOAS_VINDAS}"
     Wait Until Page Contains    text=${TXT_BOAS_VINDAS}    timeout=10

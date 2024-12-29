@@ -25,6 +25,9 @@ Digitar a senha
 Clicar no botão para entrar
     Clicar no botão Entrar
 
+Verificar se o endpoint /home está presente na url
+    Verifica se a url contem /home
+
 Criar Sessão na ServeRest
     ${token}          Get Env    TOKEN
     ${headers}        Create Dictionary    Authorization=Bearer ${token}    accept=application/json    Content-Type=application/json

@@ -24,6 +24,9 @@ E inserir a senha correta para o e-mail ou CPF
 
 E clicar no botão "Entrar"
     Clicar no botão Entrar
+
+Então devo ser redirecionado para a página /home
+    Verifica se a url contem /home
     
-Então a página deve conter "${TXT_BOAS_VINDAS}"
+E a página deve conter "${TXT_BOAS_VINDAS}"
     Verificar se a página contem "${TXT_BOAS_VINDAS}"
