@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2024-12-29T01:48:48.275429" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste Login Procedural" source="C:\Case_automacao_toro_investimentos\automacao_robot_framework\WebTesting\tests\teste_login_procedural.robot">
+<test id="s1-t1" name="Caso de Teste 01 - Login bem sucedido" line="9">
+<kw name="Abrir navegador" owner="teste_login_procedural" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-29T01:48:48.598427" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-29T01:48:48.598427" elapsed="1.854675"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-29T01:48:50.453102" elapsed="0.037872"/>
+</kw>
+<status status="PASS" start="2024-12-29T01:48:48.597430" elapsed="1.893544"/>
+</kw>
+<kw name="Acessar a home do site da Toro Investimentos" owner="teste_login_procedural">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-12-29T01:48:50.491974" level="INFO">Opening url 'https://www.toroinvestimentos.com.br/'</msg>
+<arg>${URL_Toro_Investimentos}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-12-29T01:48:50.491974" elapsed="3.310334"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${BTN_FAZER_LOGIN}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-29T01:48:53.803308" elapsed="0.050445"/>
+</kw>
+<status status="PASS" start="2024-12-29T01:48:50.490974" elapsed="3.362779"/>
+</kw>
+<kw name="Clicar na opção Fazer login" owner="teste_login_procedural">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-29T01:48:53.854756" level="INFO">Clicking element '//span[@class='login-text'][contains(.,'Fazer login')]'.</msg>
+<arg>locator=${BTN_FAZER_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T01:48:53.854756" elapsed="0.180839"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-12-29T01:48:54.045595" level="INFO">${Window} = ['8E413CC521E7B31606E3F10B7F9AAC9D', 'D59C972582CBC3E260C2C21FB1214BFA']</msg>
+<var>${Window}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-12-29T01:48:54.035595" elapsed="0.010000"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${Window}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-12-29T01:48:54.045595" elapsed="0.059002"/>
+</kw>
+<status status="PASS" start="2024-12-29T01:48:53.854756" elapsed="0.249841"/>
+</kw>
+<kw name="Verifica se aparece a frase &quot;Acesse sua conta Toro.&quot;" owner="teste_login_procedural" source_name="Verifica se aparece a frase &quot;${FRASE}&quot;">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>text=${FRASE}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-29T01:48:54.106599" elapsed="3.541022"/>
+</kw>
+<status status="PASS" start="2024-12-29T01:48:54.105598" elapsed="3.542023"/>
+</kw>
+<kw name="Digitar e-mail válido no campo de E-mail ou CPF" owner="teste_login_procedural">
+<kw name="Get Env" owner="env_loader">
+<msg time="2024-12-29T01:48:57.650622" level="INFO">${email} = yuristricken7@gmail.com</msg>
+<var>${email}</var>
+<arg>EMAIL</arg>
+<status status="PASS" start="2024-12-29T01:48:57.648623" elapsed="0.001999"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${INPUT_EMAIL_CPF}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-29T01:48:57.651624" elapsed="0.054996"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-29T01:48:57.707622" level="INFO">Typing text 'yuristricken7@gmail.com' into text field 'username'.</msg>
+<arg>locator=${INPUT_EMAIL_CPF}</arg>
+<arg>text=${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T01:48:57.707622" elapsed="0.286000"/>
+</kw>
+<status status="PASS" start="2024-12-29T01:48:57.648623" elapsed="0.344999"/>
+</kw>
+<kw name="Digitar senha do e-mail inserido no campo de Senha" owner="teste_login_procedural">
+<kw name="Get Env" owner="env_loader">
+<msg time="2024-12-29T01:48:57.996621" level="INFO">${senha} = Yuri@kjk2123</msg>
+<var>${senha}</var>
+<arg>SENHA</arg>
+<status status="PASS" start="2024-12-29T01:48:57.994624" elapsed="0.001997"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${INPUT_SENHA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-29T01:48:57.996621" elapsed="0.033000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-29T01:48:58.030618" level="INFO">Typing text 'Yuri@kjk2123' into text field 'password'.</msg>
+<arg>locator=${INPUT_SENHA}</arg>
+<arg>text=${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T01:48:58.029621" elapsed="0.148000"/>
+</kw>
+<status status="PASS" start="2024-12-29T01:48:57.993622" elapsed="0.185000"/>
+</kw>
+<kw name="Clicar no botão Entrar" owner="teste_login_procedural">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-29T01:48:58.179621" level="INFO">Clicking button '//button[@class='btn btn--md btn--full btn-primary--solid'][contains(.,'Entrar')]'.</msg>
+<arg>locator=${BRN_ENTRAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T01:48:58.178622" elapsed="0.217999"/>
+</kw>
+<status status="PASS" start="2024-12-29T01:48:58.178622" elapsed="0.217999"/>
+</kw>
+<kw name="Verificar se a página contem &quot;Olá, Yuri&quot;" owner="teste_login_procedural" source_name="Verificar se a página contem &quot;${TXT_BOAS_VINDAS}&quot;">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>text=${TXT_BOAS_VINDAS}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-29T01:48:58.397621" elapsed="4.655932"/>
+</kw>
+<status status="PASS" start="2024-12-29T01:48:58.397621" elapsed="4.656931"/>
+</kw>
+<kw name="Fechar navegador" owner="teste_login_procedural" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-12-29T01:49:03.199592" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-12-29T01:49:03.055555" elapsed="0.144037"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-29T01:49:03.199592" elapsed="2.267356"/>
+</kw>
+<status status="PASS" start="2024-12-29T01:49:03.054552" elapsed="2.412396"/>
+</kw>
+<doc>Esse teste verifica o botão "Fazer login"
+E também verifica se o login é efetuado com sucesso passando credenciais válidas.</doc>
+<tag>Funçionalidade_Login</tag>
+<status status="PASS" start="2024-12-29T01:48:48.595429" elapsed="16.873476"/>
+</test>
+<doc>Esse suíte de testa a funcionalidade de Login da Toroinventimentos.com.br</doc>
+<status status="PASS" start="2024-12-29T01:48:48.277429" elapsed="17.194276"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Funçionalidade_Login</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Teste Login Procedural">Teste Login Procedural</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
