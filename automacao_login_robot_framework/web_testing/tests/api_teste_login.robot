@@ -6,6 +6,8 @@ Resource    ../pages/api_teste_login.resource
 
 *** Test Cases ***
 Cenário 01: Realizar login com sucesso na Toro Investimentos
+    [Documentation]    Testa o login com credenciais válidas, 
+    ...                verificando se o redirecionamento para /home ocorre corretamente.
     Abrir o navegador
     Acessar a página inicial da Toro Investimentos
     Clicar no botão Fazer login

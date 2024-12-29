@@ -7,8 +7,8 @@ Test Teardown    Fechar navegador
 
 *** Test Cases ***
 Caso de Teste 01 - Login bem sucedido
-    [Documentation]    Esse teste verifica o botão "Fazer login"
-    ...                E também verifica se o login é efetuado com sucesso passando credenciais válidas.
+    [Documentation]    Testa o login com credenciais válidas, 
+    ...                verificando se o redirecionamento para /home ocorre corretamente.
     [Tags]             Funçionalidade_Login
     Dado que eu esteja no site da Toro Investimentos
     Quando eu clicar em "Fazer login" e for redirecionado para a página de login
