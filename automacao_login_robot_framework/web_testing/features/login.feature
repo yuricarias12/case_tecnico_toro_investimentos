@@ -11,6 +11,7 @@ Cenário: Login bem sucedido
     E inserir a senha correta para o e-mail ou CPF
     E clicar no botão "Entrar"
     Então devo ser redirecionado para a página /home
+    E a página deve conter "Olá, Yuri"
 
 Cenário: Login com senha inválida
     Dado que eu esteja no site da Toro Investimentos
