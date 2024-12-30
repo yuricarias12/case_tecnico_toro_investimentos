@@ -12,7 +12,7 @@ Caso de Teste 01 - Login bem sucedido
     ...                confirma a exibição da saudação personalizada "Olá, Yuri".  
     ...                O caso de teste foi estruturado em formato Gherkin (BDD), 
     ...                descrevendo o cenário com passos claros: Dado, Quando, e Então.
-    [Tags]             Funçionalidade_Login
+    [Tags]             Login_Gherkin_BDD
     Dado que eu esteja no site da Toro Investimentos
     Quando eu clicar em "Fazer login" e for redirecionado para a página de login
     Então devo ver a mensagem "Acesse sua conta Toro" na página de login

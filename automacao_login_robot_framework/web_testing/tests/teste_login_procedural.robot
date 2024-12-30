@@ -12,7 +12,7 @@ Caso de Teste 01 - Login bem sucedido
     ...                confirma a exibição da saudação personalizada "Olá, Yuri". 
     ...                Garantindo que a experiência do usuário ao logar-se no sistema ocorra sem erros.  
     ...                O caso de teste foi estruturado em formato procedural, listando cada etapa em sequência.
-    [Tags]             Funçionalidade_Login
+    [Tags]             Login_Procedural
     Acessar a home do site da Toro Investimentos
     Clicar na opção Fazer login
     Verifica se aparece a frase "Acesse sua conta Toro."

@@ -9,6 +9,7 @@ Cenário 01: Realizar login com sucesso na Toro Investimentos
     [Documentation]    Testa o login com credenciais válidas, 
     ...                verificando se o redirecionamento para a página /home ocorre corretamente,
     ...                além de validar os dados retornados pela API de usuário
+    [Tags]             Login_API
     Abrir o navegador
     Acessar a página inicial da Toro Investimentos
     Clicar no botão Fazer login
