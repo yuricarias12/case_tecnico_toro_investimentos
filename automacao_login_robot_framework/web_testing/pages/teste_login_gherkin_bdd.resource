@@ -13,7 +13,7 @@ Quando eu clicar em "Fazer login" e for redirecionado para a página de login
     ${Window}                        Get Window Handles
     Switch Window                    ${Window}[1]
 
-Então a frase "${FRASE}" deve ser exibida
+Então devo ver a mensagem "${FRASE}" na página de login
     Wait Until Page Contains         text=${FRASE}
 
 Quando eu inserir um e-mail ou CPF válido no campo
