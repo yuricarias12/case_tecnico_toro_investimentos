@@ -10,6 +10,16 @@ Carregar Credenciais
     Set Suite Variable    ${EMAIL}
     Set Suite Variable    ${SENHA}
 
+Digitar e-mail válido no campo de E-mail ou CPF
+    [Arguments]    ${email}
+    Wait Until Element Is Visible    locator=${INPUT_EMAIL_CPF}    timeout=10
+    Input Text                       locator=${INPUT_EMAIL_CPF}    text=${email}
+
+Digitar senha do e-mail inserido no campo de Senha
+    [Arguments]    ${senha}
+    Wait Until Element Is Visible    locator=${INPUT_SENHA}        timeout=10
+    Input Text                       locator=${INPUT_SENHA}        text=${senha}
+
 Login Function
     Abrir navegador
     Carregar Credenciais
@@ -20,13 +30,3 @@ Login Function
     Clicar no botão Entrar
     Verifica se a url contem /home
     Verificar se a página contem "Olá, Yuri"
-
-Digitar e-mail válido no campo de E-mail ou CPF
-    [Arguments]    ${email}
-    Wait Until Element Is Visible    locator=${INPUT_EMAIL_CPF}    timeout=10
-    Input Text                       locator=${INPUT_EMAIL_CPF}    text=${email}
-
-Digitar senha do e-mail inserido no campo de Senha
-    [Arguments]    ${senha}
-    Wait Until Element Is Visible    locator=${INPUT_SENHA}        timeout=10
-    Input Text                       locator=${INPUT_SENHA}        text=${senha}
