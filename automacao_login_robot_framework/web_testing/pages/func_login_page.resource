@@ -23,10 +23,10 @@ Login Function
 
 Digitar e-mail válido no campo de E-mail ou CPF
     [Arguments]    ${email}
-    Wait Until Element Is Visible    locator=${INPUT_EMAIL_CPF}
+    Wait Until Element Is Visible    locator=${INPUT_EMAIL_CPF}    timeout=10
     Input Text                       locator=${INPUT_EMAIL_CPF}    text=${email}
 
 Digitar senha do e-mail inserido no campo de Senha
     [Arguments]    ${senha}
-    Wait Until Element Is Visible    locator=${INPUT_SENHA}
+    Wait Until Element Is Visible    locator=${INPUT_SENHA}        timeout=10
     Input Text                       locator=${INPUT_SENHA}        text=${senha}
