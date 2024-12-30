@@ -32,19 +32,19 @@ Verifica se aparece a frase "${FRASE}"
 
 Digitar e-mail válido no campo de E-mail ou CPF
     ${email}                         Get Env    EMAIL
-    Wait Until Element Is Visible    locator=${INPUT_EMAIL_CPF}
+    Wait Until Element Is Visible    locator=${INPUT_EMAIL_CPF}    timeout=10
     Input Text                       locator=${INPUT_EMAIL_CPF}    text=${email}
     
 Digitar senha do e-mail inserido no campo de Senha
     ${senha}                         Get Env    SENHA
-    Wait Until Element Is Visible    locator=${INPUT_SENHA}
+    Wait Until Element Is Visible    locator=${INPUT_SENHA}        timeout=10
     Input Text                       locator=${INPUT_SENHA}        text=${senha}
 
 Clicar no botão Entrar
     Click Button    locator=${BRN_ENTRAR}
 
 Verifica se a url contem /home
-    Wait Until Location Contains    /home
+    Wait Until Location Contains    /home    timeout=10
 
-Verificar se a página contem "${TXT_BOAS_VINDAS}"
-    Wait Until Page Contains    text=${TXT_BOAS_VINDAS}    timeout=10
+Verificar se a página contem "${NOME_USUARIO}"
+    Wait Until Page Contains    text=${NOME_USUARIO}    timeout=10
