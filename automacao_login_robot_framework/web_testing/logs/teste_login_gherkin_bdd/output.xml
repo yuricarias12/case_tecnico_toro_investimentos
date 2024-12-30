@@ -1,176 +1,193 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2024-12-29T01:47:26.561144" rpa="false" schemaversion="5">
-<suite id="s1" name="Teste Login Gherkin Bdd" source="C:\Case_automacao_toro_investimentos\automacao_robot_framework\WebTesting\tests\teste_login_gherkin_bdd.robot">
+<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2024-12-30T18:25:30.648674" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste Login Gherkin Bdd" source="C:\case_automacao_toro_investimentos\automacao_robot_framework\webtesting\tests\teste_login_gherkin_bdd.robot">
 <test id="s1-t1" name="Caso de Teste 01 - Login bem sucedido" line="9">
 <kw name="Abrir navegador" owner="teste_login_procedural" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-29T01:47:26.952163" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2024-12-30T18:25:30.919686" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-29T01:47:26.951166" elapsed="1.780655"/>
+<status status="PASS" start="2024-12-30T18:25:30.918684" elapsed="1.877884"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-29T01:47:28.732823" elapsed="0.035014"/>
+<status status="PASS" start="2024-12-30T18:25:32.797618" elapsed="0.050134"/>
 </kw>
-<status status="PASS" start="2024-12-29T01:47:26.950132" elapsed="1.817705"/>
+<status status="PASS" start="2024-12-30T18:25:30.917667" elapsed="1.930085"/>
 </kw>
 <kw name="Dado que eu esteja no site da Toro Investimentos" owner="teste_login_gherkin_bdd">
 <kw name="Acessar a home do site da Toro Investimentos" owner="teste_login_procedural">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-12-29T01:47:28.769827" level="INFO">Opening url 'https://www.toroinvestimentos.com.br/'</msg>
+<msg time="2024-12-30T18:25:32.848753" level="INFO">Opening url 'https://www.toroinvestimentos.com.br/'</msg>
 <arg>${URL_Toro_Investimentos}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-12-29T01:47:28.768824" elapsed="3.194940"/>
+<status status="PASS" start="2024-12-30T18:25:32.848753" elapsed="1.978475"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${BTN_FAZER_LOGIN}</arg>
 <arg>timeout=10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-29T01:47:31.965763" elapsed="0.046995"/>
+<status status="PASS" start="2024-12-30T18:25:34.828191" elapsed="0.051986"/>
 </kw>
-<status status="PASS" start="2024-12-29T01:47:28.768824" elapsed="3.243934"/>
+<status status="PASS" start="2024-12-30T18:25:32.848753" elapsed="2.031424"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${BTN_FAZER_LOGIN}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-29T01:47:32.012758" elapsed="0.021000"/>
+<status status="PASS" start="2024-12-30T18:25:34.881177" elapsed="0.021000"/>
 </kw>
-<status status="PASS" start="2024-12-29T01:47:28.768824" elapsed="3.264934"/>
+<status status="PASS" start="2024-12-30T18:25:32.847752" elapsed="2.054425"/>
 </kw>
 <kw name="Quando eu clicar em &quot;Fazer login&quot; e for redirecionado para a página de login" owner="teste_login_gherkin_bdd">
 <kw name="Clicar na opção Fazer login" owner="teste_login_procedural">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-29T01:47:32.035758" level="INFO">Clicking element '//span[@class='login-text'][contains(.,'Fazer login')]'.</msg>
+<msg time="2024-12-30T18:25:34.904174" level="INFO">Clicking element '//span[@class='login-text'][contains(.,'Fazer login')]'.</msg>
 <arg>locator=${BTN_FAZER_LOGIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T01:47:32.035758" elapsed="0.178999"/>
+<status status="PASS" start="2024-12-30T18:25:34.903177" elapsed="0.161002"/>
 </kw>
 <kw name="Get Window Handles" owner="SeleniumLibrary">
-<msg time="2024-12-29T01:47:32.224757" level="INFO">${Window} = ['7A51987C1E0B2AF2DAD9194C6EA2328F', '9D6552D9AE0469AC58C81B7616637B05']</msg>
+<msg time="2024-12-30T18:25:35.073178" level="INFO">${Window} = ['AB6B13637BD4DF369EA46151A4AD73AC', '75CE21598CE8999A5867403B9555934D']</msg>
 <var>${Window}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<status status="PASS" start="2024-12-29T01:47:32.215759" elapsed="0.008998"/>
+<status status="PASS" start="2024-12-30T18:25:35.064179" elapsed="0.009999"/>
 </kw>
 <kw name="Switch Window" owner="SeleniumLibrary">
 <arg>${Window}[1]</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" start="2024-12-29T01:47:32.225757" elapsed="0.057006"/>
+<status status="PASS" start="2024-12-30T18:25:35.074178" elapsed="0.060006"/>
 </kw>
-<status status="PASS" start="2024-12-29T01:47:32.034758" elapsed="0.248005"/>
+<status status="PASS" start="2024-12-30T18:25:34.903177" elapsed="0.231007"/>
 </kw>
 <kw name="Get Window Handles" owner="SeleniumLibrary">
-<msg time="2024-12-29T01:47:32.289758" level="INFO">${Window} = ['7A51987C1E0B2AF2DAD9194C6EA2328F', '9D6552D9AE0469AC58C81B7616637B05']</msg>
+<msg time="2024-12-30T18:25:35.139177" level="INFO">${Window} = ['AB6B13637BD4DF369EA46151A4AD73AC', '75CE21598CE8999A5867403B9555934D']</msg>
 <var>${Window}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<status status="PASS" start="2024-12-29T01:47:32.282763" elapsed="0.006995"/>
+<status status="PASS" start="2024-12-30T18:25:35.134184" elapsed="0.004993"/>
 </kw>
 <kw name="Switch Window" owner="SeleniumLibrary">
 <arg>${Window}[1]</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" start="2024-12-29T01:47:32.290758" elapsed="0.055003"/>
+<status status="PASS" start="2024-12-30T18:25:35.140178" elapsed="0.048003"/>
 </kw>
-<status status="PASS" start="2024-12-29T01:47:32.034758" elapsed="0.311003"/>
+<status status="PASS" start="2024-12-30T18:25:34.903177" elapsed="0.285004"/>
 </kw>
-<kw name="Então a frase &quot;Acesse sua conta Toro&quot; deve ser exibida" owner="teste_login_gherkin_bdd" source_name="Então a frase &quot;${FRASE}&quot; deve ser exibida">
+<kw name="Então devo ver a mensagem &quot;Acesse sua conta Toro&quot; na página de login" owner="teste_login_gherkin_bdd" source_name="Então devo ver a mensagem &quot;${FRASE}&quot; na página de login">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>text=${FRASE}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-12-29T01:47:32.346759" elapsed="3.227882"/>
+<status status="PASS" start="2024-12-30T18:25:35.189179" elapsed="3.428786"/>
 </kw>
-<status status="PASS" start="2024-12-29T01:47:32.345761" elapsed="3.228880"/>
+<status status="PASS" start="2024-12-30T18:25:35.189179" elapsed="3.428786"/>
 </kw>
 <kw name="Quando eu inserir um e-mail ou CPF válido no campo" owner="teste_login_gherkin_bdd">
 <kw name="Digitar e-mail válido no campo de E-mail ou CPF" owner="teste_login_procedural">
 <kw name="Get Env" owner="env_loader">
-<msg time="2024-12-29T01:47:35.577646" level="INFO">${email} = yuristricken7@gmail.com</msg>
+<msg time="2024-12-30T18:25:38.620967" level="INFO">${email} = yuristricken7@gmail.com</msg>
 <var>${email}</var>
 <arg>EMAIL</arg>
-<status status="PASS" start="2024-12-29T01:47:35.575642" elapsed="0.002004"/>
+<status status="PASS" start="2024-12-30T18:25:38.618965" elapsed="0.002002"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${INPUT_EMAIL_CPF}</arg>
+<arg>timeout=10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-29T01:47:35.578643" elapsed="0.082998"/>
+<status status="PASS" start="2024-12-30T18:25:38.620967" elapsed="0.065998"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-29T01:47:35.662642" level="INFO">Typing text 'yuristricken7@gmail.com' into text field 'username'.</msg>
+<msg time="2024-12-30T18:25:38.687967" level="INFO">Typing text 'yuristricken7@gmail.com' into text field 'username'.</msg>
 <arg>locator=${INPUT_EMAIL_CPF}</arg>
 <arg>text=${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T01:47:35.662642" elapsed="0.242005"/>
+<status status="PASS" start="2024-12-30T18:25:38.686965" elapsed="0.260001"/>
 </kw>
-<status status="PASS" start="2024-12-29T01:47:35.575642" elapsed="0.329005"/>
+<status status="PASS" start="2024-12-30T18:25:38.618965" elapsed="0.328001"/>
 </kw>
-<status status="PASS" start="2024-12-29T01:47:35.575642" elapsed="0.329005"/>
+<status status="PASS" start="2024-12-30T18:25:38.617965" elapsed="0.329001"/>
 </kw>
 <kw name="E inserir a senha correta para o e-mail ou CPF" owner="teste_login_gherkin_bdd">
 <kw name="Digitar senha do e-mail inserido no campo de Senha" owner="teste_login_procedural">
 <kw name="Get Env" owner="env_loader">
-<msg time="2024-12-29T01:47:35.907643" level="INFO">${senha} = Yuri@kjk2123</msg>
+<msg time="2024-12-30T18:25:38.949965" level="INFO">${senha} = Yuri@kjk2123</msg>
 <var>${senha}</var>
 <arg>SENHA</arg>
-<status status="PASS" start="2024-12-29T01:47:35.905640" elapsed="0.002003"/>
+<status status="PASS" start="2024-12-30T18:25:38.948964" elapsed="0.001001"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${INPUT_SENHA}</arg>
+<arg>timeout=10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-29T01:47:35.907643" elapsed="0.029997"/>
+<status status="PASS" start="2024-12-30T18:25:38.950968" elapsed="0.031997"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-29T01:47:35.938640" level="INFO">Typing text 'Yuri@kjk2123' into text field 'password'.</msg>
+<msg time="2024-12-30T18:25:38.983964" level="INFO">Typing text 'Yuri@kjk2123' into text field 'password'.</msg>
 <arg>locator=${INPUT_SENHA}</arg>
 <arg>text=${senha}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T01:47:35.937640" elapsed="0.149007"/>
+<status status="PASS" start="2024-12-30T18:25:38.983964" elapsed="0.145000"/>
 </kw>
-<status status="PASS" start="2024-12-29T01:47:35.905640" elapsed="0.181007"/>
+<status status="PASS" start="2024-12-30T18:25:38.947965" elapsed="0.182003"/>
 </kw>
-<status status="PASS" start="2024-12-29T01:47:35.905640" elapsed="0.181007"/>
+<status status="PASS" start="2024-12-30T18:25:38.947965" elapsed="0.182003"/>
 </kw>
 <kw name="E clicar no botão &quot;Entrar&quot;" owner="teste_login_gherkin_bdd">
 <kw name="Clicar no botão Entrar" owner="teste_login_procedural">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-29T01:47:36.088639" level="INFO">Clicking button '//button[@class='btn btn--md btn--full btn-primary--solid'][contains(.,'Entrar')]'.</msg>
+<msg time="2024-12-30T18:25:39.130964" level="INFO">Clicking button '//button[@class='btn btn--md btn--full btn-primary--solid'][contains(.,'Entrar')]'.</msg>
 <arg>locator=${BRN_ENTRAR}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T01:47:36.087641" elapsed="0.208001"/>
+<status status="PASS" start="2024-12-30T18:25:39.130964" elapsed="0.214000"/>
 </kw>
-<status status="PASS" start="2024-12-29T01:47:36.087641" elapsed="0.208001"/>
+<status status="PASS" start="2024-12-30T18:25:39.130964" elapsed="0.214000"/>
 </kw>
-<status status="PASS" start="2024-12-29T01:47:36.087641" elapsed="0.208001"/>
+<status status="PASS" start="2024-12-30T18:25:39.129968" elapsed="0.214996"/>
 </kw>
-<kw name="Então a página deve conter &quot;Olá, Yuri&quot;" owner="teste_login_gherkin_bdd" source_name="Então a página deve conter &quot;${TXT_BOAS_VINDAS}&quot;">
-<kw name="Verificar se a página contem &quot;${TXT_BOAS_VINDAS}&quot;" owner="teste_login_procedural" source_name="Verificar se a página contem &quot;${TXT_BOAS_VINDAS}&quot;">
+<kw name="Então devo ser redirecionado para a página /home" owner="teste_login_gherkin_bdd">
+<kw name="Verifica se a url contem /home" owner="teste_login_procedural">
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>/home</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2024-12-30T18:25:39.345965" elapsed="4.623424"/>
+</kw>
+<status status="PASS" start="2024-12-30T18:25:39.345965" elapsed="4.623424"/>
+</kw>
+<status status="PASS" start="2024-12-30T18:25:39.344964" elapsed="4.624425"/>
+</kw>
+<kw name="E a página deve conter &quot;Olá, Yuri&quot;" owner="teste_login_gherkin_bdd" source_name="E a página deve conter &quot;${NOME_USUARIO}&quot;">
+<kw name="Verificar se a página contem &quot;${NOME_USUARIO}&quot;" owner="teste_login_procedural" source_name="Verificar se a página contem &quot;${NOME_USUARIO}&quot;">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>text=${TXT_BOAS_VINDAS}</arg>
+<arg>text=${NOME_USUARIO}</arg>
 <arg>timeout=10</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-12-29T01:47:36.297644" elapsed="4.684984"/>
+<status status="PASS" start="2024-12-30T18:25:43.971391" elapsed="0.023997"/>
 </kw>
-<status status="PASS" start="2024-12-29T01:47:36.296645" elapsed="4.685983"/>
+<status status="PASS" start="2024-12-30T18:25:43.970388" elapsed="0.025000"/>
 </kw>
-<status status="PASS" start="2024-12-29T01:47:36.295642" elapsed="4.686986"/>
+<status status="PASS" start="2024-12-30T18:25:43.970388" elapsed="0.025000"/>
 </kw>
 <kw name="Fechar navegador" owner="teste_login_procedural" type="TEARDOWN">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-12-29T01:47:41.123628" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-12-30T18:25:44.130387" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-12-29T01:47:40.984633" elapsed="0.138995"/>
+<status status="PASS" start="2024-12-30T18:25:43.997389" elapsed="0.132998"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-29T01:47:41.123628" elapsed="2.234335"/>
+<status status="PASS" start="2024-12-30T18:25:44.130387" elapsed="2.268145"/>
 </kw>
-<status status="PASS" start="2024-12-29T01:47:40.983629" elapsed="2.374334"/>
+<status status="PASS" start="2024-12-30T18:25:43.996387" elapsed="2.403210"/>
 </kw>
-<doc>Esse teste verifica o botão "Fazer login"
-E também verifica se o login é efetuado com sucesso passando credenciais válidas.</doc>
+<doc>Este caso de teste verifica o login com credenciais válidas.
+Ele valida o redirecionamento para a página /home e,
+confirma a exibição da saudação personalizada "Olá, Yuri".
+O caso de teste foi estruturado em formato Gherkin (BDD),
+descrevendo o cenário com passos claros: Dado, Quando, e Então.</doc>
 <tag>Funçionalidade_Login</tag>
-<status status="PASS" start="2024-12-29T01:47:26.949132" elapsed="16.409839"/>
+<status status="PASS" start="2024-12-30T18:25:30.916667" elapsed="15.483886"/>
 </test>
 <doc>Esse suíte de testa a funcionalidade de Login da Toroinventimentos.com.br</doc>
-<status status="PASS" start="2024-12-29T01:47:26.563143" elapsed="16.799815"/>
+<status status="PASS" start="2024-12-30T18:25:30.650684" elapsed="15.752912"/>
 </suite>
 <statistics>
 <total>
