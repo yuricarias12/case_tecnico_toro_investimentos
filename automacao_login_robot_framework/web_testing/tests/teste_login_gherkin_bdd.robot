@@ -7,8 +7,11 @@ Test Teardown    Fechar navegador
 
 *** Test Cases ***
 Caso de Teste 01 - Login bem sucedido
-    [Documentation]    Testa o login com credenciais válidas, 
-    ...                verificando se o redirecionamento para /home ocorre corretamente.
+    [Documentation]    Este caso de teste verifica o login com credenciais válidas. 
+    ...                Ele valida o redirecionamento para a página /home e, 
+    ...                confirma a exibição da saudação personalizada "Olá, Yuri".  
+    ...                O caso de teste foi estruturado em formato Gherkin (BDD), 
+    ...                descrevendo o cenário com passos claros: Dado, Quando, e Então.
     [Tags]             Funçionalidade_Login
     Dado que eu esteja no site da Toro Investimentos
     Quando eu clicar em "Fazer login" e for redirecionado para a página de login
