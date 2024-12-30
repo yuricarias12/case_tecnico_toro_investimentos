@@ -13,7 +13,7 @@ Quando eu clicar em "Fazer login" e for redirecionado para a página de login
     ${Window}                        Get Window Handles
     Switch Window                    ${Window}[1]
 
-Então devo ver a mensagem "${FRASE}" na página de login
+Então devo ver a mensagem "${FRASE}" na página de login 
     Wait Until Page Contains         text=${FRASE}
 
 Quando eu inserir um e-mail ou CPF válido no campo
@@ -28,5 +28,5 @@ E clicar no botão "Entrar"
 Então devo ser redirecionado para a página /home
     Verifica se a url contem /home
     
-E a página deve conter "${TXT_BOAS_VINDAS}"
-    Verificar se a página contem "${TXT_BOAS_VINDAS}"
+E a página deve conter "${NOME_USUARIO}"
+    Verificar se a página contem "${NOME_USUARIO}"
