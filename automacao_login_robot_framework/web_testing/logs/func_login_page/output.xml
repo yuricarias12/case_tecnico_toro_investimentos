@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2024-12-30T10:02:28.308495" rpa="false" schemaversion="5">
+<suite id="s1" name="Func Login Page" source="C:\Case_automacao_toro_investimentos\automacao_robot_framework\webtesting\tests\func_login_page.robot">
+<test id="s1-t1" name="Login De Usuario" line="6">
+<kw name="Login Function" owner="func_login_page">
+<kw name="Abrir navegador" owner="teste_login_procedural">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-30T10:02:28.607453" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-30T10:02:28.607453" elapsed="1.967122"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-30T10:02:30.574575" elapsed="0.037001"/>
+</kw>
+<status status="PASS" start="2024-12-30T10:02:28.606453" elapsed="2.006124"/>
+</kw>
+<kw name="Carregar Credenciais" owner="func_login_page">
+<kw name="Get Env" owner="env_loader">
+<msg time="2024-12-30T10:02:30.618578" level="INFO">${EMAIL} = yuristricken7@gmail.com</msg>
+<var>${EMAIL}</var>
+<arg>EMAIL</arg>
+<status status="PASS" start="2024-12-30T10:02:30.612577" elapsed="0.006001"/>
+</kw>
+<kw name="Get Env" owner="env_loader">
+<msg time="2024-12-30T10:02:30.619581" level="INFO">${SENHA} = Yuri@kjk2123</msg>
+<var>${SENHA}</var>
+<arg>SENHA</arg>
+<status status="PASS" start="2024-12-30T10:02:30.618578" elapsed="0.001003"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-12-30T10:02:30.620579" level="INFO">${EMAIL} = yuristricken7@gmail.com</msg>
+<arg>${EMAIL}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-12-30T10:02:30.620579" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-12-30T10:02:30.620579" level="INFO">${SENHA} = Yuri@kjk2123</msg>
+<arg>${SENHA}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-12-30T10:02:30.620579" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-30T10:02:30.612577" elapsed="0.008002"/>
+</kw>
+<kw name="Acessar a home do site da Toro Investimentos" owner="teste_login_procedural">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-12-30T10:02:30.621578" level="INFO">Opening url 'https://www.toroinvestimentos.com.br/'</msg>
+<arg>${URL_Toro_Investimentos}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-12-30T10:02:30.621578" elapsed="3.655857"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${BTN_FAZER_LOGIN}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-30T10:02:34.278449" elapsed="0.045977"/>
+</kw>
+<status status="PASS" start="2024-12-30T10:02:30.621578" elapsed="3.702848"/>
+</kw>
+<kw name="Clicar na opção Fazer login" owner="teste_login_procedural">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-30T10:02:34.325426" level="INFO">Clicking element '//span[@class='login-text'][contains(.,'Fazer login')]'.</msg>
+<arg>locator=${BTN_FAZER_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-30T10:02:34.325426" elapsed="0.231038"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-12-30T10:02:34.566464" level="INFO">${Window} = ['B4E8E680412D590386A342844E4FE500', '82864C66BAB35CA34B2BDC14764B2DDA']</msg>
+<var>${Window}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-12-30T10:02:34.556464" elapsed="0.010000"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${Window}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-12-30T10:02:34.566464" elapsed="0.073561"/>
+</kw>
+<status status="PASS" start="2024-12-30T10:02:34.324426" elapsed="0.315599"/>
+</kw>
+<kw name="Digitar e-mail válido no campo de E-mail ou CPF" owner="func_login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${INPUT_EMAIL_CPF}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-30T10:02:34.640025" elapsed="3.559171"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-30T10:02:38.200194" level="INFO">Typing text 'yuristricken7@gmail.com' into text field 'username'.</msg>
+<arg>locator=${INPUT_EMAIL_CPF}</arg>
+<arg>text=${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-30T10:02:38.199196" elapsed="0.293002"/>
+</kw>
+<arg>${EMAIL}</arg>
+<status status="PASS" start="2024-12-30T10:02:34.640025" elapsed="3.852173"/>
+</kw>
+<kw name="Digitar senha do e-mail inserido no campo de Senha" owner="func_login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${INPUT_SENHA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-30T10:02:38.493196" elapsed="0.035998"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-30T10:02:38.530214" level="INFO">Typing text 'Yuri@kjk2123' into text field 'password'.</msg>
+<arg>locator=${INPUT_SENHA}</arg>
+<arg>text=${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-30T10:02:38.529194" elapsed="0.152038"/>
+</kw>
+<arg>${SENHA}</arg>
+<status status="PASS" start="2024-12-30T10:02:38.492198" elapsed="0.190043"/>
+</kw>
+<kw name="Clicar no botão Entrar" owner="teste_login_procedural">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-30T10:02:38.682241" level="INFO">Clicking button '//button[@class='btn btn--md btn--full btn-primary--solid'][contains(.,'Entrar')]'.</msg>
+<arg>locator=${BRN_ENTRAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-30T10:02:38.682241" elapsed="0.216991"/>
+</kw>
+<status status="PASS" start="2024-12-30T10:02:38.682241" elapsed="0.216991"/>
+</kw>
+<kw name="Verifica se a url contem /home" owner="teste_login_procedural">
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>/home</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2024-12-30T10:02:38.900234" elapsed="4.560256"/>
+</kw>
+<status status="PASS" start="2024-12-30T10:02:38.899232" elapsed="4.561258"/>
+</kw>
+<kw name="Verificar se a página contem &quot;Olá, Yuri&quot;" owner="teste_login_procedural" source_name="Verificar se a página contem &quot;${TXT_BOAS_VINDAS}&quot;">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>text=${TXT_BOAS_VINDAS}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-30T10:02:43.460490" elapsed="0.019002"/>
+</kw>
+<status status="PASS" start="2024-12-30T10:02:43.460490" elapsed="0.019002"/>
+</kw>
+<status status="PASS" start="2024-12-30T10:02:28.605434" elapsed="14.874058"/>
+</kw>
+<status status="PASS" start="2024-12-30T10:02:28.604452" elapsed="14.877043"/>
+</test>
+<status status="PASS" start="2024-12-30T10:02:28.310480" elapsed="15.172012"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Func Login Page">Func Login Page</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
