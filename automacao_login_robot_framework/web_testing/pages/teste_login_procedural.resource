@@ -8,7 +8,7 @@ ${URL_Toro_Investimentos}            https://www.toroinvestimentos.com.br/
 ${BTN_FAZER_LOGIN}                   //span[@class='login-text'][contains(.,'Fazer login')]
 ${INPUT_EMAIL_CPF}                   username
 ${INPUT_SENHA}                       password
-${BRN_ENTRAR}                        //button[@class='btn btn--md btn--full btn-primary--solid'][contains(.,'Entrar')]
+${BTN_ENTRAR}                        //button[@class='btn btn--md btn--full btn-primary--solid'][contains(.,'Entrar')]
 *** Keywords ***
 Abrir navegador
     Open Browser                    browser=${BROWSER}
@@ -41,7 +41,7 @@ Digitar senha do e-mail inserido no campo de Senha
     Input Text                       locator=${INPUT_SENHA}        text=${senha}
 
 Clicar no botão Entrar
-    Click Button    locator=${BRN_ENTRAR}
+    Click Button    locator=${BTN_ENTRAR}
 
 Verifica se a url contem /home
     Wait Until Location Contains    /home    timeout=10
